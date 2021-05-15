@@ -16,8 +16,10 @@ use App\Http\Controllers\AuthController;
 */
 
 
-Route::get('/auth',[AuthController::class,'index']);
-Route::post('/auth',[AuthController::class,'store']);
+Route::get('/auth',[AuthController::class,'index']);// list users
+Route::post('/auth',[AuthController::class,'store']); // register account
+Route::post('/auth/login',[AuthController::class,'login']); // login
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
