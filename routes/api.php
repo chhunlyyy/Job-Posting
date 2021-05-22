@@ -24,6 +24,8 @@ Route::post('/auth/login',[AuthController::class,'login']); // login
 ///
 Route::post('/job',[JobController::class,'listing']);// list jobs
 Route::post('/job_create',[JobController::class,'createJob']);// create a job
+
+//
 Route::post('/submission_list',[JobController::class,'listSubmission']); //list submission
 Route::post('/submission',[JobController::class,'submission']);// add sumission
 
