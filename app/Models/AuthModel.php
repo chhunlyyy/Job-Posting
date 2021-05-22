@@ -17,6 +17,5 @@ class AuthModel extends Model
         'email',
         'status',
         'password_hash'
-
     ];
 }
